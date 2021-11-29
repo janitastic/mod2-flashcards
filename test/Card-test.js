@@ -7,6 +7,7 @@ describe('Card', function() {
 
   it('should be a function', function() {
     const card = new Card();
+    //lint says 'card' is a value that's never used
     expect(Card).to.be.a('function');
   });
 
