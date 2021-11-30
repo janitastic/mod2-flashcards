@@ -1,11 +1,13 @@
 const chai = require('chai');
 const expect = chai.expect;
+
 const Card = require('../src/Card');
 
 describe('Card', () => {
 
   it('should be a function', () => {
     const card = new Card();
+    //npm lint says this is assigned a value but never used
     expect(Card).to.be.a('function');
   });
 
