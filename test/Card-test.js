@@ -1,11 +1,13 @@
 const chai = require('chai');
 const expect = chai.expect;
+
 const Card = require('../src/Card');
 
 describe('Card', () => {
 
   it('should be a function', () => {
     const card = new Card();
+    //npm lint says this is assigned a value but never used
     expect(Card).to.be.a('function');
   });
 
@@ -19,7 +21,7 @@ describe('Card', () => {
     expect(card.question).to.equal('What allows you to define a set of related information using key-value pairs?');
   });
 
-  it('should store a list of possible answers', function() {
+  it('should store a list of possible answers', () => {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     expect(card.answers).to.deep.equal(['object', 'array', 'function']);
   });
