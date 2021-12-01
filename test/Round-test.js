@@ -6,7 +6,7 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 // const Turn  = require('..src/Turn');
 
-describe.only('Round', () => {
+describe('Round', () => {
   let card1;
   let card2;
   let card3;
