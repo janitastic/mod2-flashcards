@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 
-describe.only('Deck', () => {
+describe('Deck', () => {
 
   it('should be a function', () => {
     const deck = new Deck();
