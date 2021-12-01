@@ -16,10 +16,6 @@ class Game {
 -----------------------------------------------------------------------`)
   }
 
-  printQuestion(round) {
-    util.main(round);
-  }
-
   start() {
     const cards = prototypeQuestions.map(card => {
       return card = new Card(card.id, card.question, card.answers, card.correctAnswer);
@@ -28,6 +24,10 @@ class Game {
     this.currentRound = new Round(deck);
     this.printMessage(deck, this.currentRound);
     this.printQuestion(this.currentRound);
+  }
+
+  printQuestion(round) {
+    util.main(round);
   }
 }
 
