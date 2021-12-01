@@ -5,8 +5,7 @@ const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
 describe('Turn', () => {
-  let card;
-  let turn;
+  let card, turn;
 
   beforeEach('setup', () => {
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
@@ -43,6 +42,7 @@ describe('Turn', () => {
   });
 
   it('should return false if the user guess does not match the correct answer on the card, and should tell the user they guessed incorrectly', () => {
+
     turn = new Turn('array', card);
 
     expect(turn.evaluateGuess()).to.equal(false);

@@ -6,12 +6,7 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
 describe('Round', () => {
-  let card1;
-  let card2;
-  let card3;
-  let cards;
-  let deck;
-  let round;
+  let card1, card2, card3, cards, deck, round;
 
   beforeEach('setup', () => {
     card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
