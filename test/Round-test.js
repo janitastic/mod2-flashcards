@@ -55,5 +55,19 @@ describe.only('Round', () => {
     expect(round.returnCurrentCard()).to.deep.equal({id: 2, question: 'What is a comma-separated list of related values?', answers: ['array', 'object', 'function'], correctAnswer: 'array'});
   });
 
-  
+  it('should be able evaluate if a guess is correct', () => {
+    expect(round.takeTurn('object')).to.equal('correct!');
+  });
+
+  it('should be able evaluate if a guess is incorrect', () => {
+    expect(round.takeTurn('array')).to.equal('incorrect!');
+  });
+
+  it('should store incorrect guesses', () => {
+    expect(round.incorrectGuesses).to.deep.equal([]);
+    round.takeTurn('array');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+    round.takeTurn('object');
+    expect(round.incorrectGuesses).to.deep.equal([1, 2]);
+  });
 });
