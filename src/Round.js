@@ -28,6 +28,12 @@ class Round {
     // console.log(percent);
     return percent;
   }
+
+  endRound() {
+    const percentCorrect = this.calculatePercentCorrect();
+    console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!`);
+    return `** Round over! ** You answered ${percentCorrect}% of the questions correctly!`;
+  }
 }
 
 module.exports = Round;
