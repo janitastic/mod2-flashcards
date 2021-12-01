@@ -4,8 +4,7 @@ const expect = chai.expect;
 const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
-describe.only('Turn', () => {
-
+describe('Turn', () => {
   let card;
   let turn;
 
@@ -44,7 +43,6 @@ describe.only('Turn', () => {
   });
 
   it('should return false if the user guess does not match the correct answer on the card, and should tell the user they guessed incorrectly', () => {
-
     turn = new Turn('array', card);
 
     expect(turn.evaluateGuess()).to.equal(false);
