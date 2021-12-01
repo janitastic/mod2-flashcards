@@ -19,8 +19,14 @@ class Round {
 
     if(!turn.evaluateGuess()) {
       this.incorrectGuesses.push(currentCard.id);
-    } 
+    }
     return turn.giveFeedback();
+  }
+
+  calculatePercentCorrect() {
+    const percent = Math.floor(((this.turns - this.incorrectGuesses.length) / this.turns) * 100);
+    // console.log(percent);
+    return percent;
   }
 }
 

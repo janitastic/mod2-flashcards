@@ -70,4 +70,13 @@ describe.only('Round', () => {
     round.takeTurn('object');
     expect(round.incorrectGuesses).to.deep.equal([1, 2]);
   });
+
+  it('should be able to calculate the percentage of questions answered correctly', () => {
+    round.takeTurn('object');
+    round.takeTurn('object');
+    expect(round.calculatePercentCorrect()).to.equal(50);
+    round.takeTurn('mutator method');
+    expect(round.calculatePercentCorrect()).to.equal(66);
+  });
+
 });
