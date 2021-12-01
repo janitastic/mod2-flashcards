@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Round = require('../src/Round');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
-// const Turn = require('..src/Turn');
+// const Turn  = require('..src/Turn');
 
 describe.only('Round', () => {
   let card1;
@@ -40,7 +40,20 @@ describe.only('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
+  it('should be able to take turns guessing', () => {
+    expect(round.turns).to.equal(0);
+    round.takeTurn('object');
+    expect(round.turns).to.equal(1);
+  });
+
   it('should return the current card being played', () => {
     expect(round.returnCurrentCard()).to.deep.equal({id: 1, question: 'What allows you to define a set of related information using key-value pairs?', answers: ['object', 'array', 'function'], correctAnswer: 'object'});
   });
+
+  it('should move on to the next card after a guess is made', () => {
+    round.takeTurn('array');
+    expect(round.returnCurrentCard()).to.deep.equal({id: 2, question: 'What is a comma-separated list of related values?', answers: ['array', 'object', 'function'], correctAnswer: 'array'});
+  });
+
+  
 });
