@@ -33,7 +33,8 @@ class Round {
     const percentCorrect = this.calculatePercentCorrect();
     this.calculateTime();
 
-    console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!`);
+    console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!
+      \n--> To start over, press 'ctrl + c' then run the 'node index.js' command again. <--`);
     return `** Round over! ** You answered ${percentCorrect}% of the questions correctly!`;
   }
 
@@ -44,7 +45,7 @@ class Round {
     let secondsDisplay = parseInt(seconds);
     let minutesDisplay = parseInt(minutes);
 
-    console.log(`*!*!* You completed the game in ${minutesDisplay} minute(s) and ${secondsDisplay} second(s)! *!*!*`);
+    console.log(`\n*!*!* You completed the game in ${minutesDisplay} minute(s) and ${secondsDisplay} second(s) Try again to improve your score! *!*!*\n`);
     return `*!*!* You completed the game in ${minutesDisplay} minute(s) and ${secondsDisplay} second(s)! *!*!*`
   }
 }

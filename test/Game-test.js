@@ -33,6 +33,7 @@ describe('Game', () => {
 
   it('should create cards, put cards in deck, create new round with deck on start', () => {
     game.start();
+
     expect(game.currentRound).to.be.an.instanceof(Round);
     expect(game.currentRound.deck).to.be.an.instanceof(Deck);
     expect(game.currentRound.deck.cards[0]).to.be.an.instanceof(Card);
