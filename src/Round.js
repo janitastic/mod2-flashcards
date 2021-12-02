@@ -33,7 +33,8 @@ class Round {
     const percentCorrect = this.calculatePercentCorrect();
     this.calculateTime();
 
-    console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!\n To start over, press ctrl + C then run the node index.js command again.`);
+    console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!
+      \n\n --> To start over, press 'ctrl + C' then run the 'node index.js' command again. <--`);
     return `** Round over! ** You answered ${percentCorrect}% of the questions correctly!`;
   }
 
