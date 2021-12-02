@@ -34,7 +34,7 @@ class Round {
     this.calculateTime();
 
     console.log(`** Round over! ** You answered ${percentCorrect}% of the questions correctly!
-      \n\n --> To start over, press 'ctrl + C' then run the 'node index.js' command again. <--`);
+      \n--> To start over, press 'ctrl + c' then run the 'node index.js' command again. <--`);
     return `** Round over! ** You answered ${percentCorrect}% of the questions correctly!`;
   }
 
