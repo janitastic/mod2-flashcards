@@ -29,7 +29,7 @@ git clone git@github.com:janitastic/mod2-flashcards.git
 **2) Once you have cloned the repo, change into the newly cloned directory (flashcards).**
 
 ```bash
-cd flashcards
+cd mod2-flashcards
 ```
 
 **3) Install the library dependencies. Run:**
