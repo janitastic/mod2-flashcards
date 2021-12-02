@@ -29,7 +29,7 @@ git clone git@github.com:janitastic/mod2-flashcards.git
 **2) Once you have cloned the repo, change into the newly cloned directory (flashcards).**
 
 ```bash
-cd flashcards
+cd mod2-flashcards
 ```
 
 **3) Install the library dependencies. Run:**
@@ -49,8 +49,8 @@ Node server running on port 3000
     
  Instructions: When prompted with a question, select your answer and press enter.
     
- - You can make your selection either by entering the corresponding number digit followed by the enter key, 
- or by using the up and down arrow keys followed by the enter key.
+ - You can make your selection either by entering the corresponding number digit followed by the enter key,
+    or by using the up and down arrow keys followed by the enter key.
     
  - After receiving your response feedback, press the enter key again to continue to the next question.
     
